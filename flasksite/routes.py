@@ -93,7 +93,7 @@ def authorized(oauth_token):
     print(user)
     login_user(user)
     db.session.commit()
-    return redirect(next_url)
+    return redirect(next_url), oauth_token
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():

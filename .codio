@@ -1,16 +1,23 @@
 {
-// Configure your Run and Preview buttons here.
-
-// Run button configuration
-  "commands": {
-        "Run": "python3 {{filepath}}"
+    "commands": {
+        "Run Python": "python3 {{filepath}}",
+        "Run Flask": "export FLASK_APP=flasksite | export FLASK_ENV=development | flask run --host=0.0.0.0"
     },
-
-// Preview button configuration
-  "preview": {
+    "preview": {
+        "Flask Application": "https://{{domain5000}}/",
+        "Virtual Desktop": "https://{{domain3000}}/",
         "Project Index (static)": "https://{{domain}}/{{index}}",
         "Current File (static)": "https://{{domain}}/{{filepath}}",
-        "Box URL": "https://{{domain3000}}/",
-        "Viewer": "https://{{domain3000}}/"
-  }
+        "Box URL": "http://{{domain3000}}/",
+        "Box URL SSL": "https://{{domain3000}}/"
+    },
+    "debugger": [
+        {
+            "type": "PYTHON3",
+            "command": "{{filepath}}",
+            "before": "",
+            "uuid": "6c228c3f-596c-c44a-399f-5d86a7e17bf9",
+            "name": "Debug"
+        }
+    ]
 }
